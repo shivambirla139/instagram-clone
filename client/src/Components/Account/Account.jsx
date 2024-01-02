@@ -61,6 +61,7 @@ const Account = () => {
       <div className="accountleft">
         {posts && posts.length > 0 ? (
           posts.map((post) => (
+            
             <Post
               key={post._id}
               postId={post._id}
@@ -74,6 +75,7 @@ const Account = () => {
               isAccount={true}
               isDelete={true}
             />
+            
           ))
         ) : (
           <Typography variant="h6">You have not made any post</Typography>

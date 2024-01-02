@@ -3,7 +3,9 @@ const mongoose = require("mongoose");
 //'mongodb+srv://shivambirla139:password108@cluster0.qvaixgn.mongodb.net/'
 exports.connectDatabase = async () => {
   try {
-    const con = await mongoose.connect('mongodb://localhost:27017/socialmedia',{
+    const con = await mongoose.connect(
+      process.env.MONGOURI
+      ,{
           useNewUrlParser: true,
           useUnifiedTopology: true,
           })
